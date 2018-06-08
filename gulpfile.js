@@ -53,7 +53,7 @@ gulp.task('html',function(cb){
 
 gulp.task('js', function(cb) {
     pump([
-        gulp.src(['src/js/util.js','src/js/main.js']),
+        gulp.src(['src/js/util.js','src/js/global.js','src/js/main.js']),
         babel({presets: ['env']}),
         uglify(),
         concat('main.js'),
