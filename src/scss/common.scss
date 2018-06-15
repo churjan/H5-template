@@ -1,13 +1,19 @@
 // 公用的样式
 
-
 //隐藏
 .clip {
   position: absolute;
   clip: rect(0 0 0 0);
 }
-
-.layer{ 
+.clearfix:before,
+.container:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.layer {
   position: fixed;
   top: 0;
   left: 0;
@@ -16,22 +22,21 @@
   // background: url("../images/bg.png") center top/100% 100% no-repeat;
   opacity: 0;
   visibility: hidden;
-  transition: opacity .3s 0s, visibility 0s .3s;
+  transition: opacity 0.3s 0s, visibility 0s 0.3s;
   &.is-visible {
     opacity: 1;
     visibility: visible;
-    transition: opacity .3s 0s, visibility 0s 0s;
+    transition: opacity 0.3s 0s, visibility 0s 0s;
   }
 }
 
-.ani{
+.ani {
   opacity: 0;
   visibility: hidden;
-  transition: opacity .3s 0s, visibility 0s .3s;
+  transition: opacity 0.3s 0s, visibility 0s 0.3s;
   &.is-visible {
     opacity: 1;
     visibility: visible;
-    transition: opacity .3s 0s, visibility 0s 0s;
+    transition: opacity 0.3s 0s, visibility 0s 0s;
   }
 }
-
