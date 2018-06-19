@@ -85,6 +85,18 @@ th {
 
 // 在这个重置样式表的基础上添加
 
+//ios去黑影，当你点击一个链接或者通过Javascript定义的可点击元素的时候，它就会出现一个半透明的灰色背景
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  -webkit-user-select: none;
+  user-select: none; // 禁止选中文本(如无文本选中需求,此为必选项)
+  -webkit-overflow-scrolling:touch; //IOS使用滚动回弹效果
+}
+
+
 a {
   text-decoration: none;
 }
@@ -101,14 +113,4 @@ body {
 
 
 
-//ios去黑影，当你点击一个链接或者通过Javascript定义的可点击元素的时候，它就会出现一个半透明的灰色背景
-* {
-  -webkit-tap-highlight-color: transparent;
-}
 
-// 禁止选中文本(如无文本选中需求,此为必选项)
-body {
-  -webkit-user-select: none;
-  user-select: none;
-  -webkit-overflow-scrolling:touch;//IOS使用滚动回弹效果
-}

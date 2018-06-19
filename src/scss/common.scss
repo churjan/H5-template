@@ -1,17 +1,11 @@
 // 公用的样式
 
+
+
 //隐藏
 .clip {
   position: absolute;
   clip: rect(0 0 0 0);
-}
-.clearfix:before,
-.container:after {
-  content: "";
-  display: table;
-}
-.clearfix:after {
-  clear: both;
 }
 .layer {
   position: fixed;

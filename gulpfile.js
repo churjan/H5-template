@@ -4,6 +4,7 @@ let gulp         = require('gulp'),                             //基础库
     uglify       = require('gulp-uglify'),                      //js压缩
     babel        = require('gulp-babel')                        //把es6转成es5,js压缩对es6不支持
     sass         = require('gulp-sass'),                        //编译sass
+    px2rem       = require('gulp-px2rem-plugin'),               //将px转成rem
     autoprefixer = require('gulp-autoprefixer'),                //给css加前缀
     rename       = require('gulp-rename'),                      //重命名
     clean        = require('gulp-clean'),                       //删除文件
@@ -69,6 +70,7 @@ gulp.task('css', function(cb) {
     // 压缩输出方式 compressed
     pump([
         gulp.src(path.input.css),
+        px2rem({'width_design':750,'valid_num':2,'pieces':7.5}),
         sass({outputStyle:'compressed'}),
         autoprefixer({
             browsers: ['last 2 versions'],
