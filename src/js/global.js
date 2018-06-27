@@ -1,6 +1,6 @@
 const global={
     openid:'',
-    baseURI:''
+    baseURL:''
 }
 
 //获取openid
@@ -19,7 +19,7 @@ function getWeixinUserInfo() {
   } else {
     setTimeout(function() {
       console.log("跳转到后台"); 
-      window.location.href = `${global.baseURI}Home/Weixin/index?url=${href}`;
+      window.location.href = `${global.baseURL}Home/Weixin/index?url=${href}`;
     }, 0);
   }
 }
