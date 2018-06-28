@@ -66,6 +66,7 @@ audio,
 video {
   height: auto;
   max-width: 100%;
+  display: block;
 }
 
 iframe {
@@ -100,15 +101,13 @@ body {
 a {
   text-decoration: none;
 }
-img {
-  display: block;
-  transform: translate3d(0, 0, 0);//网页开启硬件加速使动画流畅
-}
+
 body {
   opacity: 0;
   transition: opacity 0.3s;
   font-family: "Microsoft YaHei";
 }
+
 
 
 

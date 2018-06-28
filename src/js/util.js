@@ -9,5 +9,24 @@ const util={
             obj[newArr[0]] = newArr[1];
         }
         return obj;
-    }
+    },
+    
+    //在微信里面自动播放
+    autoPlayAudio(ele){
+        if(window.WeixinJSBridge){
+            WeixinJSBridge.invoke('getNetworkType', {}, function(e) {
+                ele.play();
+                ele.pause();
+                ele.play();
+            }, false);
+        }else{
+            document.addEventListener("WeixinJSBridgeReady", function() {
+                WeixinJSBridge.invoke('getNetworkType', {}, function(e) {
+                    ele.play();
+                    ele.pause();
+                    ele.play();
+                });
+            }, false);
+        }
+      }
 }

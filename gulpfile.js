@@ -17,7 +17,7 @@ const path={
         html:'src/*.html',
         css:'src/scss/main.scss',
         js:'src/js/*.js',
-        images:'src/images/**/*',
+        assets:'src/assets/**/*',
         libs:'src/libs/**/*'
     },
     output:{
@@ -25,7 +25,7 @@ const path={
         html:'dist/',
         css:'dist/css/',
         js:'dist/js/',
-        images:'dist/images/',
+        assets:'dist/assets/',
         libs:'dist/libs/'
     }
 }
@@ -89,7 +89,7 @@ gulp.task('clean', function(cb) {
     ],cb)  
 })
 gulp.task('build', function(cb) {
-    gulpSequence('clean', ['html','js','css','libs','images'], cb);
+    gulpSequence('clean', ['html','js','css','libs','assets'], cb);
 })
 //下面的task没有做处理，只是单纯导到dist文件夹里面
 gulp.task('libs', function(cb) {
@@ -99,10 +99,10 @@ gulp.task('libs', function(cb) {
         browserSync.reload({stream:true})
     ],cb)  
 })
-gulp.task('images', function(cb) {
+gulp.task('assets', function(cb) {
     pump([
-        gulp.src(path.input.images),
-        gulp.dest(path.output.images),
+        gulp.src(path.input.assets),
+        gulp.dest(path.output.assets),
         browserSync.reload({stream:true})
     ],cb)  
 })
@@ -136,8 +136,8 @@ gulp.task('watch', ['serve','build'], function() {
      // 监听插件
      gulp.watch(path.input.libs, ['libs']);
 
-    // 监听images
-    gulp.watch(path.input.images, ['images']);
+    // 监听assets
+    gulp.watch(path.input.assets, ['assets']);
 
 
 });
