@@ -17,7 +17,7 @@
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s 0s, visibility 0s 0.3s;
-  &.is-visible {
+  &.visible {
     opacity: 1;
     visibility: visible;
     transition: opacity 0.3s 0s, visibility 0s 0s;
@@ -28,7 +28,7 @@
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s 0s, visibility 0s 0.3s;
-  &.is-visible {
+  &.visible {
     opacity: 1;
     visibility: visible;
     transition: opacity 0.3s 0s, visibility 0s 0s;
