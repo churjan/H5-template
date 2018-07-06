@@ -64,8 +64,6 @@ iframe,
 object,
 audio,
 video {
-  height: auto;
-  max-width: 100%;
   display: block;
 }
 
@@ -105,7 +103,8 @@ a {
 body {
   opacity: 0;
   transition: opacity 0.3s;
-  font-family: "Microsoft YaHei";
+  font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+  //参考：https://juejin.im/entry/5b3dd6f8f265da0fae4efd39?utm_source=gold_browser_extension
 }
 
 
