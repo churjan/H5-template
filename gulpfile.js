@@ -118,7 +118,7 @@ gulp.task('serve',function(){
             baseDir: ['dist'], // 设置服务器的根目录
             index:'index.html' // 指定默认打开的文件
         },
-        port: 666
+        port: 3300
     })
 });
 

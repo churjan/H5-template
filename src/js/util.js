@@ -1,6 +1,6 @@
 const util={
     //图片加载
-    loading(rootPath,imgArr,callback){
+    loading(rootPath,imgArr,cb){
         let total=imgArr.length;//图片总数量
         let count=0;//图片每加载一个数量加一
         imgArr.forEach((item)=>{
@@ -8,7 +8,7 @@ const util={
           img.src=rootPath+item;
           img.onload=function() {
             count++;
-            callback(count,total);
+            cb&&cb(count,total);
           }
         })
     },

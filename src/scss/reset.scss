@@ -90,9 +90,13 @@ th {
 }
 
 body {
-  -webkit-user-select: none;
   user-select: none; // 禁止选中文本(如无文本选中需求,此为必选项)
   -webkit-overflow-scrolling:touch; //IOS使用滚动回弹效果
+
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+  //参考：https://juejin.im/entry/5b3dd6f8f265da0fae4efd39?utm_source=gold_browser_extension
 }
 
 
@@ -100,12 +104,6 @@ a {
   text-decoration: none;
 }
 
-body {
-  opacity: 0;
-  transition: opacity 0.3s;
-  font-family: "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
-  //参考：https://juejin.im/entry/5b3dd6f8f265da0fae4efd39?utm_source=gold_browser_extension
-}
 
 
 
